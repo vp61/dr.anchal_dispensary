@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+ 
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+	 
+
+	<title>Dr Anchals</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <!-- End fonts -->
+
+	<!-- core:css -->
+	<link rel="stylesheet" href="assets/Questions/core/core.css">
+	<!-- endinject -->
+
+	<!-- Plugin css for this page -->
+	<!-- End plugin css for this page -->
+
+	<!-- inject:css -->
+	<link rel="stylesheet" href="assets/fonts/feather-font/css/iconfont.css">
+	<link rel="stylesheet" href="assets/Questions/flag-icon-css/css/flag-icon.min.css">
+	<!-- endinject -->
+
+  <!-- Layout styles -->  
+	<link rel="stylesheet" href="assets/css/demo1/style.css">
+  <!-- End layout styles -->
+
+  <link rel="shortcut icon" href="/assets/images/favicon.png" />
+</head>
+<body>
+	<div class="main-wrapper">
+<!-- partial:partials/_sidebar.html -->
+<nav class="sidebar">
+	<div class="sidebar-header">
+	  <a href="#" class="sidebar-brand">
+		Aqua<span class="text-success">Green</span>
+	  </a>
+	  <div class="sidebar-toggler not-active">
+		<span></span>
+		<span></span>
+		<span></span>
+	  </div>
+	</div>
+	<div class="sidebar-body">
+	  <ul class="nav">
+		<li class="nav-item nav-category">Main</li>
+		<li class="nav-item">
+		   <a href="dashboard.php" class="nav-link">
+			<i class="link-icon" data-feather="box"></i>
+			<span class="link-title">Dashboard</span>
+		  </a>
+		</li>
+		<li class="nav-item nav-category">Question</li>
+		<li class="nav-item">
+		 <a class="nav-link" data-bs-toggle="collapse" href="#emails" role="button" aria-expanded="false" aria-controls="emails">
+			<i class="link-icon" data-feather="user-plus"></i>
+			<span class="link-title">Question</span>
+			<i class="link-arrow" data-feather="chevron-down"></i>
+		  </a>
+		  <div class="collapse" id="emails">
+			<ul class="nav sub-menu">
+			  <li class="nav-item">
+				<a href="view-Question.php" class="nav-link">View Question</a>
+			  </li>
+			  <li class="nav-item">
+				<a href="add-Question.php" class="nav-link">Add Question</a>
+			  </li>
+				 <li class="nav-item">
+				<a href="Question-send-link" class="nav-link">Send Link</a>
+			  </li>
+				  <li class="nav-item">
+				<a href="Question-send-invoice.html" class="nav-link">Send Invoice</a>
+			  </li>
+			  
+			</ul>
+		  </div>
+		</li>
+	  
+		<li class="nav-item nav-category">Customers</li>
+		<li class="nav-item">
+		  <a class="nav-link" data-bs-toggle="collapse" href="#uiComponents" role="button" aria-expanded="false" aria-controls="uiComponents">
+			<i class="link-icon" data-feather="users"></i>
+			<span class="link-title">Customer</span>
+			<i class="link-arrow" data-feather="chevron-down"></i>
+		  </a>
+		  <div class="collapse" id="uiComponents">
+			<ul class="nav sub-menu">
+			  <li class="nav-item">
+				<a href="view-customer.php" class="nav-link">View Customer</a>
+			  </li>
+			  <li class="nav-item">
+				<a href="add-customer.php" class="nav-link">Add Customer</a>
+			  </li>
+				 <li class="nav-item">
+				<a href="customer-send-link.html" class="nav-link">Send Link</a>
+			  </li>
+				  <li class="nav-item">
+				<a href="customer-send-invoice.html" class="nav-link">Send Invoice</a>
+			  </li>
+			  
+			</ul>
+		  </div>
+		</li>
+	   
+	 
+	 
+	 
+		 
+		<li class="nav-item nav-category">Panding Vender</li>
+		<li class="nav-item">
+		  <a class="nav-link" data-bs-toggle="collapse" href="#general-pages" role="button" aria-expanded="false" aria-controls="general-pages">
+			<i class="link-icon" data-feather="book"></i>
+			<span class="link-title">Panding Vender</span>
+			<i class="link-arrow" data-feather="chevron-down"></i>
+		  </a>
+		  <div class="collapse" id="general-pages">
+			<ul class="nav sub-menu">
+			  <li class="nav-item">
+				<a href="viewpandingvender.php" class="nav-link">View Panding Vender</a>
+			  </li>
+			  <li class="nav-item">
+				<a href="viewRejectvender.php" class="nav-link">View Rejected Vender</a>
+			  </li> 
+			 
+			 
+			</ul>
+		  </div>
+		</li>
+		<li class="nav-item nav-category">Invoice</li>
+		<li class="nav-item">
+		  <a href="add-invoice.html" class="nav-link">
+		   <i class="link-icon" data-feather="book"></i>
+		   <span class="link-title">Invoice</span>
+		 </a>
+	   </li>
+	  </ul>
+	</div>
+  </nav>
+   
+		<!-- partial -->
+	
+		<div class="page-wrapper">
+				
+			<!-- partial:partials/_navbar.html -->
+			<nav class="navbar">
+				<a href="#" class="sidebar-toggler">
+					<i data-feather="menu"></i>
+				</a>
+				<div class="navbar-content">
+					 
+					<ul class="navbar-nav">
+					 
+					 
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="notificationDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i data-feather="bell"></i>
+								<div class="indicator">
+									<div class="circle"></div>
+								</div>
+							</a>
+							<div class="dropdown-menu p-0" aria-labelledby="notificationDropdown">
+								<div class="px-3 py-2 d-flex align-items-center justify-content-between border-bottom">
+									<p>6 New Notifications</p>
+									<a href="javascript:;" class="text-muted">Clear all</a>
+								</div>
+                <div class="p-1">
+                  <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
+                    <div class="wd-30 ht-30 d-flex align-items-center justify-content-center bg-primary rounded-circle me-3">
+											<i class="icon-sm text-white" data-feather="gift"></i>
+                    </div>
+                    <div class="flex-grow-1 me-2">
+											<p>New Order Recieved</p>
+											<p class="tx-12 text-muted">30 min ago</p>
+                    </div>	
+                  </a>
+                  <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
+                    <div class="wd-30 ht-30 d-flex align-items-center justify-content-center bg-primary rounded-circle me-3">
+											<i class="icon-sm text-white" data-feather="alert-circle"></i>
+                    </div>
+                    <div class="flex-grow-1 me-2">
+											<p>Server Limit Reached!</p>
+											<p class="tx-12 text-muted">1 hrs ago</p>
+                    </div>	
+                  </a>
+                  <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
+                    <div class="wd-30 ht-30 d-flex align-items-center justify-content-center bg-primary rounded-circle me-3">
+                      <img class="wd-30 ht-30 rounded-circle" src="https://via.placeholder.com/30x30" alt="userr">
+                    </div>
+                    <div class="flex-grow-1 me-2">
+											<p>New customer registered</p>
+											<p class="tx-12 text-muted">2 sec ago</p>
+                    </div>	
+                  </a>
+                  <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
+                    <div class="wd-30 ht-30 d-flex align-items-center justify-content-center bg-primary rounded-circle me-3">
+											<i class="icon-sm text-white" data-feather="layers"></i>
+                    </div>
+                    <div class="flex-grow-1 me-2">
+											<p>Apps are ready for update</p>
+											<p class="tx-12 text-muted">5 hrs ago</p>
+                    </div>	
+                  </a>
+                  <a href="javascript:;" class="dropdown-item d-flex align-items-center py-2">
+                    <div class="wd-30 ht-30 d-flex align-items-center justify-content-center bg-primary rounded-circle me-3">
+											<i class="icon-sm text-white" data-feather="download"></i>
+                    </div>
+                    <div class="flex-grow-1 me-2">
+											<p>Download completed</p>
+											<p class="tx-12 text-muted">6 hrs ago</p>
+                    </div>	
+                  </a>
+                </div>
+								<div class="px-3 py-2 d-flex align-items-center justify-content-center border-top">
+									<a href="javascript:;">View all</a>
+								</div>
+							</div>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<img class="wd-30 ht-30 rounded-circle" src="https://via.placeholder.com/30x30" alt="profile">
+							</a>
+							<div class="dropdown-menu p-0" aria-labelledby="profileDropdown">
+								<div class="d-flex flex-column align-items-center border-bottom px-5 py-3">
+									<div class="mb-3">
+										<img class="wd-80 ht-80 rounded-circle" src="https://via.placeholder.com/80x80" alt="">
+									</div>
+									<div class="text-center">
+										<p class="tx-16 fw-bolder">Dr anchals</p>
+										<p class="tx-12 text-muted">dranchals@gmail.com</p>
+									</div>
+								</div>
+                <ul class="list-unstyled p-1">
+                  <li class="dropdown-item py-2">
+                    <a href="pages/general/profile.html" class="text-body ms-0">
+                      <i class="me-2 icon-md" data-feather="user"></i>
+                      <span>Profile</span>
+                    </a>
+                  </li>
+                  <li class="dropdown-item py-2">
+                    <a href="javascript:;" class="text-body ms-0">
+                      <i class="me-2 icon-md" data-feather="edit"></i>
+                      <span>Edit Profile</span>
+                    </a>
+                  </li>
+                  
+                  <li class="dropdown-item py-2">
+                    <a href="javascript:;" class="text-body ms-0">
+                      <i class="me-2 icon-md" data-feather="log-out"></i>
+                      <span>Log Out</span>
+                    </a>
+                  </li>
+                </ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- partial -->
+
+			<div class="page-content">
+				
+				
+				<div class="row">
+					<div class="col-md-12 stretch-card">
+						<div class="card">
+							<div class="card-body">
+								<h6 class="card-title">Add Invoice</h6>
+									<form>
+										<div class="row">
+											<div class="col-sm-6">
+												<div class="mb-3">
+													<label class="form-label">Invoice No</label>
+													<input type="text" class="form-control" placeholder="Enter Invoice No" disabled>
+												</div>
+											</div><!-- Col -->
+											<div class="col-sm-6">
+												<div class="mb-3">
+													<label class="form-label">Date</label>
+													<input type="date" class="form-control" placeholder="Enter Invoice No">
+												</div></div>
+											</div><!-- Col -->
+											<div class="row">
+												<div class="col-sm-6">
+												<div class="mb-3">
+													<label class="form-label">Customer</label>
+													<input type="text" class="form-control" placeholder="Enter Customer Name">
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="mb-3">
+													<label class="form-label">Contact</label>
+													<input type="text" class="form-control" placeholder="Enter Number">
+												</div>
+											</div>
+											<div class="col-sm-12">
+												<div class="mb-3">
+													<label class="form-label">Address</label>
+													<input type="text" class="form-control" placeholder="Enter Your Address">
+												</div>
+											</div><!-- Col -->
+										</div><!-- Row -->
+										<div class="row">
+											<!-- Col -->
+										 
+											<div class="col-sm-6">
+												<div class="mb-3">
+													<label class="form-label">Product</label>
+													<select class="form-select  mb-3" aria-label=".form-select-sm example">
+														<option selected="">Open this select Product</option>
+														<option value="1">One</option>
+														<option value="2">Two</option>
+														<option value="3">Three</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="mb-3">
+													<label class="form-label">Unit</label>
+													<select class="form-select  mb-3" aria-label=".form-select-sm example">
+														<option selected="">Open this select Unit</option>
+														<option value="1">One</option>
+														<option value="2">Two</option>
+														<option value="3">Three</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="mb-3">
+													<label class="form-label">Quantity</label>
+													<input type="text" class="form-control" placeholder="Enter Quantity">
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="mb-3">
+													<label class="form-label">Rate</label>
+													<input type="text" class="form-control" placeholder="Enter Rate">
+												</div>
+											</div>
+											<div class="col-sm-5">
+												<div class="mb-3">
+													<label class="form-label">Total</label>
+													<input type="text" class="form-control" placeholder="Enter Total" disabled>
+													
+												</div>
+												
+											</div>
+											<div class="col-sm-1">
+												<button type="button" class="btn btn-primary btn-lg submit mt-4">+</button>
+											</div>
+											<hr class="mt-4 mb-4">
+											<div class="col-sm-6">
+												<div class="mb-3">
+													<label class="form-label">CGST(9%)</label>
+													<input type="text" class="form-control" placeholder="Enter CGST" disabled>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="mb-3">
+													<label class="form-label">SGST(9%)</label>
+													<input type="text" class="form-control" placeholder="Enter SGST" disabled>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="mb-3">
+													<label class="form-label">NetTotal</label>
+													<input type="text" class="form-control" placeholder="Enter Total" disabled>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="mb-3">
+													<label class="form-label">Paid</label>
+													<input type="text" class="form-control" placeholder="Enter Paid Amount">
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="mb-3">
+													<label class="form-label">Due</label>
+													<input type="text" class="form-control" placeholder="Enter Due Amount" disabled>
+												</div>
+											</div>
+											<div class="col-sm-6">
+												<div class="mb-3">
+													<button type="button" class="btn btn-primary btn-lg submit mt-4 ml-5">Save</button>
+												</div>
+											</div>
+											<!-- Col -->
+										</div><!-- Row -->
+										 
+									</form>
+									
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 stretch-card">
+						<div class="card">
+							<div class="card-body">
+								<h6 class="card-title"> Invoice Details</h6>
+								<div class="table-responsive">
+									<table id="dataTableExample" class="table">
+									  <thead>
+										<tr>
+										  <th>Sr</th>
+										  <th>Product</th>
+										  <th>Unit</th>
+										  <th>Qty</th>
+										  <th>Rate</th>
+										  <th>Total</th>
+										  <th>Action</th>
+										</tr>
+									  </thead>
+									  <tbody>
+										<tr>
+										  <td>01</td>
+										  <td>Product 1</td>
+										  <td>ltr</td>
+										  <td>2</td>
+										  <td>200</td>
+										  <td>400</td>
+										  <td><a class="font-12" href="delete.html"><i data-feather="archive"></i> </a> </td>
+										</tr>
+										<tr>
+										  <td>02</td>
+										  <td>Product 2</td>
+										  <td>ltr</td>
+										  <td>2</td>
+										  <td>200</td>
+										  <td>400</td>
+										  <td><a class="font-12" href="delete.html"><i data-feather="archive"></i> </a> </td>
+										</tr>
+										<tr>
+											<td>03</td>
+											<td>Product 3</td>
+											<td>ltr</td>
+											<td>2</td>
+											<td>200</td>
+											<td>400</td>
+											<td><a class="font-12" href="delete.html"><i data-feather="archive"></i> </a> </td>
+										  </tr>
+										  <tr>
+											<td>04</td>
+											<td>Product 4</td>
+											<td>ltr</td>
+											<td>2</td>
+											<td>200</td>
+											<td>400</td>
+											<td><a class="font-12" href="delete.html"><i data-feather="archive"></i> </a> </td>
+										  </tr>
+										  <tr>
+											<td>05</td>
+											<td>Product 5</td>
+											<td>ltr</td>
+											<td>2</td>
+											<td>200</td>
+											<td>400</td>
+											<td><a class="font-12" href="delete.html"><i data-feather="archive"></i> </a> </td>
+										  </tr>
+										  <tr>
+											<td>06</td>
+											<td>Product 6</td>
+											<td>ltr</td>
+											<td>2</td>
+											<td>200</td>
+											<td>400</td>
+											<td><a class="font-12" href="delete.html"><i data-feather="archive"></i> </a> </td>
+										  </tr>
+											
+										
+										 
+									  </tbody>
+									</table>
+								  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- partial:../../partials/_footer.html -->
+			<!-- partial:partials/_footer.html -->
+			<footer class="footer d-flex flex-column flex-md-row align-items-center justify-content-between px-4 py-3 border-top small">
+				<p class="text-muted mb-1 mb-md-0">Copyright © 2022 <a href="https://www.sarthaktech" target="_blank">Sarthak tech</a>.</p>
+				<p class="text-muted">Design & Developed by  <i class="mb-1 text-primary ms-1 icon-sm" data-feather="heart"></i> Sarthak tech</p>
+			</footer>
+			<!-- partial -->
+			<!-- partial -->
+	
+		</div>
+	</div>
+
+	<!-- core:js -->
+	<script src="assets/Questions/core/core.js"></script>
+	<!-- endinject -->
+
+	<!-- Plugin js for this page -->
+	<!-- End plugin js for this page -->
+
+	<!-- inject:js -->
+	<script src="assets/Questions/feather-icons/feather.min.js"></script>
+	<script src="assets/js/template.js"></script>
+	<!-- endinject -->
+
+	<!-- Custom js for this page -->
+  <!-- End custom js for this page -->
+</body>
+</html>
